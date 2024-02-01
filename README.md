@@ -25,6 +25,10 @@
    - Para o comando PATH incluído acima surtir efeito, digite o seguinte comando:</br>
      `source .bashrc`
   
-6) O último passo é a execução do Script que fará a instalação do Samba e as configurações necessárias para compartilhamento de arquivos.
+6) Executar o Script que fará a instalação do Samba e as configurações necessárias para compartilhamento de arquivos.
    Para isso utilize o seguinte comando:</br>
    `sudo smbinstall`
+7) Após o término da execução do script, reiniciar a máquina
+
+8) Verifique se o samba está instalado e rodando:</br>
+``sudo smbstatus``
