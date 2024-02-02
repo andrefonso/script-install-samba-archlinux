@@ -32,3 +32,23 @@
 
 8) Verifique se o samba está instalado e rodando:</br>
 ``sudo smbstatus``
+
+## Providências adicionais para Arch Linux Cinnamon:
+---
+1) Instalar o pacote _gvfs-smb_ para permitir que o gerenciador de arquivos Nemo possa lidar com locais SMB (Server Message Block), usando o comando abaixo:</br>
+``sudo pacman -S gvfs-smb``
+
+2) Verificar a integridade do _gvfs_ digitando:</br>
+``sudo pacman -Sy gvfs``
+
+3) Reiniciar o serviço _gvfs_ para garantir que as alterações recentes sejam aplicadas:</br>
+``systemctl --user restart gvfs-daemon``
+
+4) Opções para acesso a pasta compartilhada em outro computador da rede:</br>
+   - Em vez de usar smb://, tente usar cifs:// na barra de endereço do Nemo. Algo como:</br>
+   
+     ``cifs://nome_do_usuario@ip_do_outro_pc/nome_da_pasta_compartilhada``
+     
+   - Substitua nome_do_usuario, ip_do_outro_pc e nome_da_pasta_compartilhada pelos seus valores correspondentes.
+
+
